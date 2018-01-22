@@ -60,12 +60,10 @@ CREATE TABLE `tbLogin` (
 
 --
 -- Dumping data for table `tbLogin`
---
+-- 
 
 INSERT INTO `tbLogin` (`id`, `nama`, `email`, `password`) VALUES
-(1, 'Web Administrator', 'probis@um.ac.id', '$2y$10$nb6otmA4BXPb6jUnF0wCJO4qqRj0NdwKXw/UdynynOvb.PHqAOG0C'),
-(2, 'Arif AB', 'arifamb@gmail.com', '$2y$10$78rbfEqQiww5u5dMNeRW8O8LE8d6yleNIHxzvUoqB0XSVXPwwXawu'),
-(4, 'arif ab', 'arif.amanu@um.ac.id', '$2y$10$5oBUFzz9SwFiOJIcdlLSo.t9upRxnrApcYjJrCju4KFlr9xSloi3.');
+(1, 'Web Administrator', 'arifamb@gmail.com', '$2y$10$nb6otmA4BXPb6jUnF0wCJO4qqRj0NdwKXw/UdynynOvb.PHqAOG0C');
 
 --
 -- Indexes for dumped tables
