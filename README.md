@@ -3,8 +3,8 @@ php crud with pdo
 
 
 This project fork from:
-https://github.com/setyongr
-https://github.com/musaamin
+1. https://github.com/setyongr
+2. https://github.com/musaamin
 
 
 Login & crud operation from:
