@@ -11,8 +11,8 @@
         header("location: index.php"); //Redirect ke index
     }
 
-    //Jika ada data dikirim
-    if(isset($_POST['kirim'])){
+    //Jika ada data disubmit
+    if(isset($_POST['submit'])){
         $name = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -55,7 +55,7 @@
                <input type="text" name="name" placeholder="name" required/><br>
                <input type="email" name="email" placeholder="email address" required/><br>
                <input type="password" name="password" placeholder="password" required/><br>
-               <button type="submit" name="kirim">create</button>
+               <button type="submit" name="submit">create</button>
                <p class="message">Already registered? <a href="login.php">Sign In</a></p>
              </form>
           </div>

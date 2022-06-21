@@ -26,14 +26,14 @@ $data = $query->fetchAll();
 
 <head>
     <meta charset="utf-8">
-    <title>Daftar Biodata</title>
+    <title>CV LIST</title>
 </head>
 
 <body>
     <h3>Good morning <font color="red"><?php echo $currentUser['name'] ?></font>, <a href="logout.php">Logout</a></h3>
-    <h1>Daftar Biodata</h1>
+    <h1>CV LIST</h1>
     <a href="index.php"><button type="button">Home</button></a>
-    <a href="create.php"><button type="button">Tambah Data</button></a>
+    <a href="create.php"><button type="button">ADD DATA</button></a>
     <a href="search.php"><button type="button">Pencarian Data</button></a>
     <hr />
     <table border="1">
