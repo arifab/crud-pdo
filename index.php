@@ -30,7 +30,7 @@ $data = $query->fetchAll();
 </head>
 
 <body>
-    <h3>Selamat datang <font color="red"><?php echo $currentUser['nama'] ?></font>, <a href="logout.php">Logout</a></h3>
+    <h3>Good morning <font color="red"><?php echo $currentUser['name'] ?></font>, <a href="logout.php">Logout</a></h3>
     <h1>Daftar Biodata</h1>
     <a href="index.php"><button type="button">Home</button></a>
     <a href="create.php"><button type="button">Tambah Data</button></a>
@@ -45,13 +45,13 @@ $data = $query->fetchAll();
                 #ID
             </th>
             <th>
-                Nama
+                name
             </th>
             <th>
-                Alamat
+                address
             </th>
             <th>
-                No HP
+                No number
             </th>
             <th>
                 Aksi
@@ -68,13 +68,13 @@ $data = $query->fetchAll();
                     <?php echo $value['id'] ?>
                 </td>
                 <td>
-                    <?php echo $value['nama'] ?>
+                    <?php echo $value['name'] ?>
                 </td>
                 <td>
-                    <?php echo $value['alamat'] ?>
+                    <?php echo $value['address'] ?>
                 </td>
                 <td>
-                    <?php echo $value['hp'] ?>
+                    <?php echo $value['number'] ?>
                 </td>
                 <td>
                     <a href="edit.php?id=<?php echo $value['id'] ?>"><button type="button">Edit</button></a>

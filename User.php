@@ -53,7 +53,7 @@
             try
             {
                 // Ambil data dari database
-                $query = $this->db->prepare("SELECT * FROM tbLogin WHERE email = :email");
+                $query = $this->db->prepare("SELECT * FROM users WHERE email = :email");
                 $query->bindParam(":email", $email);
                 $query->execute();
                 $data = $query->fetch();
@@ -96,7 +96,7 @@
 
             try {
                 // Ambil data user dari database
-                $query = $this->db->prepare("SELECT * FROM tbLogin WHERE id = :id");
+                $query = $this->db->prepare("SELECT * FROM users WHERE id = :id");
                 $query->bindParam(":id", $_SESSION['user_session']);
                 $query->execute();
                 return $query->fetch();

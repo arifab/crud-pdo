@@ -38,10 +38,10 @@
         $hp = htmlentities($_POST['hp']);
 
         // Prepared statement untuk mengubah data
-        $query = $db->prepare("UPDATE `Biodata` SET `name`=:name,`address`=:address,`hp`=:hp WHERE id=:id");
+        $query = $db->prepare("UPDATE `Biodata` SET `name`=:name,`address`=:address,`number`=:number WHERE id=:id");
         $query->bindParam(":name", $name);
         $query->bindParam(":address", $address);
-        $query->bindParam(":hp", $hp);
+        $query->bindParam(":number", $number);
         $query->bindParam(":id", $_GET['id']);
         // Jalankan perintah SQL
         $query->execute();
@@ -57,7 +57,7 @@
         <title>Tambah Biodata</title>
     </head>
     <body>
-        <h3>Selamat datang <font color="red"><?php echo $currentUser['name'] ?></font>, <a href="logout.php">Logout</a></h3>
+        <h3>Good morning <font color="red"><?php echo $currentUser['name'] ?></font>, <a href="logout.php">Logout</a></h3>
         <h1>Tambah Data</h1>
         <a href="index.php"><button type="button">Home</button></a>
         <a href="create.php"><button type="button">Tambah Data</button></a>
@@ -66,7 +66,7 @@
         <form method="post">
             name:<br> <input required type="text" name="name" placeholder="name" value="<?php echo $data['name'] ?>"/> <br>
             address:<br> <input required type="text" name="address" placeholder="address" value="<?php echo $data['address'] ?>"/> <br>
-            HP:<br> <input required type="text" name="hp" placeholder="No HP" value="<?php echo $data['hp'] ?>"/> <br>
+            HP:<br> <input required type="text" name="number" placeholder="No number" value="<?php echo $data['number'] ?>"/> <br>
             <input type="submit" name="submit" />
         </form>
     </body>

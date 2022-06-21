@@ -20,14 +20,14 @@
         <title>Daftar Biodata</title>
     </head>
     <body>
-    	<h3>Selamat datang <font color="red"><?php echo $currentUser['nama'] ?></font>, <a href="logout.php">Logout</a></h3>
+    	<h3>Good morning <font color="red"><?php echo $currentUser['name'] ?></font>, <a href="logout.php">Logout</a></h3>
     	<h1>Pencarian Data</h1>    	
 		<a href="index.php"><button type="button">Home</button></a>
 		<a href="create.php"><button type="button">Tambah Data</button></a>
 		<a href="search.php"><button type="button">Pencarian Data</button></a>
 		<hr />
 		<form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-			<input type="text" name="q" placeholder="Masukkan nama" value="<?php if (isset($_GET['q'])){ echo $_GET['q']; } ?>"/>	
+			<input type="text" name="q" placeholder="Masukkan name" value="<?php if (isset($_GET['q'])){ echo $_GET['q']; } ?>"/>	
 		</form>
     </body>
 </html>
@@ -35,7 +35,7 @@
  
  if (isset($_GET['q'])){
     $q = $_GET['q'];     
-    $query = "SElECT * FROM tbBiodata WHERE nama LIKE :q OR hp LIKE :q";    
+    $query = "SElECT * FROM Biodata WHERE name LIKE :q OR number LIKE :q";    
     $q = "%".$q."%"; ////tambahkan tanda persen pada variabel $q         
     $stmt = $db->prepare($query); //persiapkan query    
     $stmt->bindParam(':q', $q); //isi nilai :q dari $q               
@@ -47,9 +47,9 @@
 	 			<tr>
 	 			  <th>No</th>
 	 			  <th>ID</th>
-	 			  <th>NAMA</th>
-	 			  <th>ALAMAT</th>
-	 			  <th>HP</th>
+	 			  <th>name</th>
+	 			  <th>address</th>
+	 			  <th>number</th>
 	 			</tr>";
 		$no=1;	
 		
@@ -58,9 +58,9 @@
 	 	 echo "<tr>
 	 			  <td>$no</td>
 	 			  <td>{$id}</td>
-	 			  <td>{$nama}</td>
-	 			  <td>{$alamat}</td>
-	 			  <td>{$hp}</td>
+	 			  <td>{$name}</td>
+	 			  <td>{$address}</td>
+	 			  <td>{$number}</td>
 	 			</tr>";	
 		 $no++;	
 		}
