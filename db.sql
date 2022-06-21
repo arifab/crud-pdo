@@ -1,11 +1,11 @@
--- phpMyAdmin SQL Dump
+-- pnumberMyAdmin SQL Dump
 -- version 4.7.4
--- https://www.phpmyadmin.net/
+-- https://www.pnumbermyadmin.net/
 --
 -- Host: localhost
 -- Generation Time: Jan 22, 2018 at 09:29 AM
 -- Server version: 10.1.28-MariaDB
--- PHP Version: 5.6.32
+-- Pnumber Version: 5.6.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,21 +25,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbBiodata`
+-- Table structure for table `Biodata`
 --
 
 CREATE TABLE `Biodata` (
   `id` int(11) NOT NULL,
-  `nama` varchar(128) NOT NULL,
-  `alamat` varchar(128) NOT NULL,
-  `hp` varchar(15) NOT NULL
+  `name` varchar(128) NOT NULL,
+  `address` varchar(128) NOT NULL,
+  `number` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbBiodata`
+-- Dumping data for table `Biodata`
 --
 
-INSERT INTO `tbBiodata` (`id`, `nama`, `alamat`, `hp`) VALUES
+INSERT INTO `Biodata` (`id`, `name`, `address`, `number`) VALUES
 (2, 'Joni Subarjo', 'Jl. Mawar No. 29', '08767565665'),
 (3, 'Jokowi', 'Jl. Kenanga No. 33', '0554454545'),
 (4, 'Slamet', 'Jl. Slamet No. 1', '0765566565'),
@@ -48,21 +48,21 @@ INSERT INTO `tbBiodata` (`id`, `nama`, `alamat`, `hp`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbLogin`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `tbLogin` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `nama` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbLogin`
+-- Dumping data for table `users`
 -- 
 
-INSERT INTO `tbLogin` (`id`, `nama`, `email`, `password`) VALUES
+INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
 (1, 'Web Administrator', 'arifamb@gmail.com', '$2y$10$nb6otmA4BXPb6jUnF0wCJO4qqRj0NdwKXw/UdynynOvb.PHqAOG0C');
 
 --
@@ -70,15 +70,15 @@ INSERT INTO `tbLogin` (`id`, `nama`, `email`, `password`) VALUES
 --
 
 --
--- Indexes for table `tbBiodata`
+-- Indexes for table `Biodata`
 --
-ALTER TABLE `tbBiodata`
+ALTER TABLE `Biodata`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbLogin`
+-- Indexes for table `users`
 --
-ALTER TABLE `tbLogin`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
@@ -87,15 +87,15 @@ ALTER TABLE `tbLogin`
 --
 
 --
--- AUTO_INCREMENT for table `tbBiodata`
+-- AUTO_INCREMENT for table `Biodata`
 --
-ALTER TABLE `tbBiodata`
+ALTER TABLE `Biodata`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `tbLogin`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `tbLogin`
+ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
