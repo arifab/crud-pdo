@@ -5,8 +5,9 @@ require_once "User.php";
 // Buat object user
 $user = new User($db);
 // Jika belum login
-if (!$user->isLoggedIn()) {
-    header("location: login.php"); //Redirect ke halaman login
+if ($user->isLoggedIn()) {
+    echo !$user->isLoggedIn() ? "true" : "false";
+    // header("location: login.php"); //Redirect ke halaman login
 }
 // Ambil data user saat ini
 $currentUser = $user->getUser();
