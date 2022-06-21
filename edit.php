@@ -61,7 +61,7 @@
         <h1>ADD DATA</h1>
         <a href="index.php"><button type="button">Home</button></a>
         <a href="create.php"><button type="button">ADD DATA</button></a>
-        <a href="search.php"><button type="button">Pencarian Data</button></a>
+        <a href="search.php"><button type="button">Search Data</button></a>
         <hr />
         <form method="post">
             name:<br> <input required type="text" name="name" placeholder="name" value="<?php echo $data['name'] ?>"/> <br>

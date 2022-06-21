@@ -21,10 +21,10 @@
     </head>
     <body>
     	<h3>Good morning <font color="red"><?php echo $currentUser['name'] ?></font>, <a href="logout.php">Logout</a></h3>
-    	<h1>Pencarian Data</h1>    	
+    	<h1>Search Data</h1>    	
 		<a href="index.php"><button type="button">Home</button></a>
 		<a href="create.php"><button type="button">ADD DATA</button></a>
-		<a href="search.php"><button type="button">Pencarian Data</button></a>
+		<a href="search.php"><button type="button">Search Data</button></a>
 		<hr />
 		<form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 			<input type="text" name="q" placeholder="Masukkan name" value="<?php if (isset($_GET['q'])){ echo $_GET['q']; } ?>"/>	
@@ -66,7 +66,7 @@
 		}
 		echo "</table>"; 		
 	} else {
-		echo "Pencarian <b>$_GET[q]</b> tidak ditemukan";
+		echo "Search <b>$_GET[q]</b> tidak ditemukan";
 	}
  }
 ?>

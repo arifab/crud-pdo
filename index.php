@@ -34,7 +34,7 @@ $data = $query->fetchAll();
     <h1>CV LIST</h1>
     <a href="index.php"><button type="button">Home</button></a>
     <a href="create.php"><button type="button">ADD DATA</button></a>
-    <a href="search.php"><button type="button">Pencarian Data</button></a>
+    <a href="search.php"><button type="button">Search Data</button></a>
     <hr />
     <table border="1">
         <tr>
