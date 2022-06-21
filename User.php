@@ -18,7 +18,7 @@
         }
 
         // Registrasi user baru
-        public function register($nama, $email, $password)
+        public function register($name, $email, $password)
         {
             try
             {
@@ -26,8 +26,8 @@
                 $hashPasswd = password_hash($password, PASSWORD_DEFAULT);
 
                 //Masukkan user baru ke database
-                $query = $this->db->prepare("INSERT INTO tbLogin(nama, email, password) VALUES(:nama, :email, :pass)");
-                $query->bindParam(":nama", $nama);
+                $query = $this->db->prepare("INSERT INTO users(name, email, password) VALUES(:name, :email, :pass)");
+                $query->bindParam(":name", $name);
                 $query->bindParam(":email", $email);
                 $query->bindParam(":pass", $hashPasswd);
                 $query->execute();

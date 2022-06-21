@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `tbBiodata`
 --
 
-CREATE TABLE `tbBiodata` (
+CREATE TABLE `Biodata` (
   `id` int(11) NOT NULL,
   `nama` varchar(128) NOT NULL,
   `alamat` varchar(128) NOT NULL,

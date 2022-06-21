@@ -13,12 +13,12 @@
 
     //Jika ada data dikirim
     if(isset($_POST['kirim'])){
-        $nama = $_POST['nama'];
+        $name = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
 
         // Registrasi user baru
-        if($user->register($nama, $email, $password)){
+        if($user->register($name, $email, $password)){
             // Jika berhasil set variable success ke true
             $success = true;
         }else{
@@ -52,7 +52,7 @@
               <?php endif; ?>
 			  <h1>Register...</h1>
               <hr>
-               <input type="text" name="nama" placeholder="nama" required/><br>
+               <input type="text" name="name" placeholder="name" required/><br>
                <input type="email" name="email" placeholder="email address" required/><br>
                <input type="password" name="password" placeholder="password" required/><br>
                <button type="submit" name="kirim">create</button>
