@@ -36,7 +36,7 @@
  if (isset($_GET['q'])){
     $q = $_GET['q'];     
     $query = "SElECT * FROM Biodata WHERE name LIKE :q OR number LIKE :q";    
-    $q = "%".$q."%"; ////tambahkan tanda persen pada variabel $q         
+    $q = "%".$q."%"; ////addkan tanda persen pada variabel $q         
     $stmt = $db->prepare($query); //persiapkan query    
     $stmt->bindParam(':q', $q); //isi nilai :q dari $q               
     $stmt->execute(); //eksekusi query   

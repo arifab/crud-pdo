@@ -37,7 +37,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Tambah Biodata</title>
+        <title>add Biodata</title>
     </head>
     <body>
         <h3>Good morning <font color="red"><?php echo $currentUser['name'] ?></font>, <a href="logout.php">Logout</a></h3>
