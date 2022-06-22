@@ -18,7 +18,7 @@
         }
 
         // Registrasi user baru
-        public function register($nama, $email, $password)
+        public function register($name, $email, $password)
         {
             try
             {
@@ -26,8 +26,8 @@
                 $hashPasswd = password_hash($password, PASSWORD_DEFAULT);
 
                 //Masukkan user baru ke database
-                $query = $this->db->prepare("INSERT INTO tbLogin(nama, email, password) VALUES(:nama, :email, :pass)");
-                $query->bindParam(":nama", $nama);
+                $query = $this->db->prepare("INSERT INTO users(name, email, password) VALUES(:name, :email, :pass)");
+                $query->bindParam(":name", $name);
                 $query->bindParam(":email", $email);
                 $query->bindParam(":pass", $hashPasswd);
                 $query->execute();
@@ -53,7 +53,7 @@
             try
             {
                 // Ambil data dari database
-                $query = $this->db->prepare("SELECT * FROM tbLogin WHERE email = :email");
+                $query = $this->db->prepare("SELECT * FROM users WHERE email = :email");
                 $query->bindParam(":email", $email);
                 $query->execute();
                 $data = $query->fetch();
@@ -96,7 +96,7 @@
 
             try {
                 // Ambil data user dari database
-                $query = $this->db->prepare("SELECT * FROM tbLogin WHERE id = :id");
+                $query = $this->db->prepare("SELECT * FROM users WHERE id = :id");
                 $query->bindParam(":id", $_SESSION['user_session']);
                 $query->execute();
                 return $query->fetch();
